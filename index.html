@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Tourism</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="skeleton"></div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <h2 class="logo">TravelGo</h2>
+
+  <nav id="navMenu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#destinations" onclick="closeMenu()">Destinations</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="themeToggle">🌙</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Explore the World with TravelGo</h1>
+  <p>Your journey begins here. Discover amazing destinations.</p>
+  <a href="#destinations" class="cta">Explore Now</a>
+</section>
+
+<!-- Destinations -->
+<section id="destinations" class="section">
+  <h2>Popular Destinations</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+      <h3>Paris</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+      <h3>Bali</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Switzerland">
+      <h3>Switzerland</h3>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="formMsg"></p>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 TravelGo|All rights are reserved</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://x.com/">Twitter</a>
+    
+  </div>
+</footer>
+
+<!-- Scroll To Top -->
+<button id="scrollTop">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

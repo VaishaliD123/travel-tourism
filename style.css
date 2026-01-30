@@ -1,0 +1,274 @@
+:root {
+  --bg: #ffffff80;
+  --text: #111;
+  --primary: #0ea5e9;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  body.dark #contact form {
+  background: #1f2937;   /* dark grey */
+}
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Offset for sticky navbar */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.skeleton {
+  width: 70px;
+  height: 70px;
+  background: #555;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { opacity: .4; }
+  50% { opacity: 1; }
+  100% { opacity: .4; }
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 140px 20px 100px;
+  text-align: center;
+  color: #0f172a;
+
+  /* Background image */
+  background:
+    linear-gradient(
+      rgba(224, 242, 254, 0.85),
+      rgba(224, 242, 254, 0.85)
+    ),
+    url("travel.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  body.dark .hero {
+  color: #f8fafc;
+  background:
+    linear-gradient(
+      rgba(2, 6, 23, 0.75),
+      rgba(2, 6, 23, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+}
+
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+.hero p {
+  margin: 15px 0 25px;
+  font-size: 18px;
+}
+.cta {
+  padding: 12px 25px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Cards Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+
+/* Card */
+.card {
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 12px;
+  font-size: 18px;
+  color: #0f172a;   
+}
+
+/* Image Section */
+/* ---------- IMAGE SECTION (GLASS EFFECT) ---------- */
+
+
+/* Form */
+form {
+  max-width: 400px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#formMsg {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background: #020617;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  margin: 0 12px;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* Scroll Top */
+#scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar nav.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+    text-align: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .navbar nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar nav a {
+    border: none;
+    padding: 0;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
